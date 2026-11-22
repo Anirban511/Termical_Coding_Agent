@@ -1,0 +1,25 @@
+[project]
+name = "forge"
+version = "0.1.0"
+description = "A terminal-based AI native coding agent"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "openai>=1.50.0",
+    "pydantic>=2.10.0",
+    "typer>=0.12.0",
+    "python-dotenv>=1.0.0",
+    "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+forge = "forge.cli:app"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
